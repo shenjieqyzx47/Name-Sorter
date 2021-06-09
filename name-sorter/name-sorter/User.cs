@@ -2,11 +2,10 @@
 
 namespace NameSorter
 {
-    class User
+    public class User
     {
         public User(string name)
         {
-            string[] names = name.Split(' ');
             Full_name = name;
             Given_name = name.Split(' ').Last();
             Last_name = name.Replace(' ' + Given_name, "");

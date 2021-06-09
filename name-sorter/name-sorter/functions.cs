@@ -5,7 +5,7 @@ using System.IO;
 
 namespace NameSorter
 {
-    class Functions
+    public class Functions
     {
         //read names from unsorted text file and put them into a list.
         public static List<User> ReadNames(string file_address) {
@@ -20,8 +20,8 @@ namespace NameSorter
                 }
                 file.Close();
             }
-            catch (Exception exception) {
-                Console.Write(exception);
+            catch (Exception) {
+                throw new FileNotFoundException();
             }
             return unsorted_name_list;
         }
