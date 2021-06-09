@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-
+﻿using System.Collections.Generic;
 
 namespace NameSorter
 {
@@ -14,9 +8,9 @@ namespace NameSorter
         {
             foreach (string arg in args)
             {
-                List<User> unsorted_name_list = functions.ReadNames(arg);
-                List<User> sorted_name_list = functions.SortNames(unsorted_name_list);
-                functions.WriteNames(sorted_name_list);
+                List<User> unsorted_name_list = Functions.ReadNames(arg);
+                List<User> sorted_name_list = Functions.SortNames(unsorted_name_list);
+                Functions.WriteNames(sorted_name_list);
             }
             System.Console.ReadLine();
         }

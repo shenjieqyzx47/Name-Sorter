@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace NameSorter
 {
@@ -11,12 +7,12 @@ namespace NameSorter
         public User(string name)
         {
             string[] names = name.Split(' ');
-            full_name = name;
-            given_name = name.Split(' ').Last();
-            last_name = name.Replace(' ' + given_name, "");
+            Full_name = name;
+            Given_name = name.Split(' ').Last();
+            Last_name = name.Replace(' ' + Given_name, "");
         }
-        public string full_name { get; set; }
-        public string given_name { get; set; }
-        public string last_name { get; set; }
+        public string Full_name { get; set; }
+        public string Given_name { get; set; }
+        public string Last_name { get; set; }
     }
 }
