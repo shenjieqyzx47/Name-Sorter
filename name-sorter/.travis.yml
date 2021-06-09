@@ -1,0 +1,8 @@
+language: csharp
+solution: name-sorter.sln
+script:
+  - msbuild /p:Configuration=Release solution-name.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
+  - cd ./name-sorter/name-sorter/
+  - csc name-sorter.cs User.cs functions.cs
+  - name-sorter ./unsorted-names-list.txt
