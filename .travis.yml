@@ -1,6 +1,5 @@
 language: csharp
 solution: name-sorter.sln
-mono: none
 before-script:
   - Install-Package Travis.Nuget.Example -Version 1.0.8
 install:
